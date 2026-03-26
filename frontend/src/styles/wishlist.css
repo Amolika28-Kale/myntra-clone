@@ -1,0 +1,150 @@
+.wishlist-page {
+  min-height: calc(100vh - 70px);
+  padding: 2rem 0;
+  background: #ffffff;
+}
+
+.wishlist-page h1 {
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.empty-wishlist {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 0px;
+  border: 1px solid #f0f0f0;
+}
+
+.empty-wishlist h2 {
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.empty-wishlist p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.wishlist-items {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0px;
+  border: 1px solid #f0f0f0;
+}
+
+.wishlist-items h3 {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.wishlist-item {
+  display: grid;
+  grid-template-columns: 150px 1fr 200px;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+}
+
+.wishlist-item:last-child {
+  border-bottom: none;
+}
+
+.item-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-info h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.item-brand {
+  margin-bottom: 0.75rem;
+}
+
+.item-price-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.sale-price {
+  font-weight: 700;
+  color: #333;
+  font-size: 1.05rem;
+}
+
+.discount {
+  background: #fce5e1;
+  color: #ee5a52;
+  padding: 0.25rem 0.5rem;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.item-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.item-actions .btn {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .wishlist-item {
+    grid-template-columns: 120px 1fr;
+    gap: 1.5rem;
+  }
+
+  .item-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .item-actions {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wishlist-item {
+    grid-template-columns: 100px 1fr;
+    gap: 1rem;
+  }
+
+  .item-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .item-actions {
+    flex-direction: column;
+  }
+
+  .item-actions .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
